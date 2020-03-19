@@ -17,22 +17,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var btnUpload: UIButton!
     @IBOutlet weak var btnGallery: UIButton!
-    
-    var picker = UIImagePickerController()
         
     override func viewDidLoad() {
         super.viewDidLoad()
             
         imagePicker.delegate = self
-        picker.delegate = self
-        
     }
         
     @IBAction func galleryPressed(_ sender: AnyObject) {
         print("Gallery")
-        picker.sourceType = .photoLibrary
-        picker.allowsEditing = true
-        present(picker, animated: true, completion: nil)
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true, completion: nil)
             
     }
     
