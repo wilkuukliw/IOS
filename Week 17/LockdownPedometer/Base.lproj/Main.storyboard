@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LockdownPedometer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZ4-w4-cNH">
+                                <rect key="frame" x="262" y="730" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0AF-Ty-vQ1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="UaK-sU-leY"/>
+                                    <constraint firstAttribute="width" constant="100" id="kwD-F6-Jda"/>
+                                </constraints>
+                                <state key="normal" image="Image-2"/>
+                                <connections>
+                                    <action selector="stopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vNn-H3-JzC"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="activity-svgrepo-com" translatesAutoresizingMaskIntoConstraints="NO" id="Cyw-rw-9YO">
+                                <rect key="frame" x="55" y="122" width="307" height="304"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="B75-aB-sak"/>
+                                    <constraint firstAttribute="height" constant="304" id="OgS-x7-cGj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJL-vj-UTD">
+                                <rect key="frame" x="152.5" y="256.5" width="112" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="FU2-Rc-PjV"/>
+                                    <constraint firstAttribute="height" constant="35" id="eqh-nr-RTz"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Steps">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="36" name="Monaco"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="piX-D1-ESN">
+                                <rect key="frame" x="68" y="730" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1Sb-9Z-t8w"/>
+                                    <constraint firstAttribute="height" constant="100" id="fNj-cq-SGv"/>
+                                </constraints>
+                                <state key="normal" image="Image-3"/>
+                                <connections>
+                                    <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SQf-e5-1vZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83529411764705885" green="0.83921568627450982" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cyw-rw-9YO" secondAttribute="trailing" constant="52" id="7gQ-JR-k98"/>
+                            <constraint firstItem="Cyw-rw-9YO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="LkN-k9-SNZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WZ4-w4-cNH" secondAttribute="bottom" constant="32" id="TQZ-9J-s25"/>
+                            <constraint firstItem="hJL-vj-UTD" firstAttribute="centerX" secondItem="Cyw-rw-9YO" secondAttribute="centerX" id="Urz-QI-mVA"/>
+                            <constraint firstItem="Cyw-rw-9YO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="hp4-B5-Kwm"/>
+                            <constraint firstItem="hJL-vj-UTD" firstAttribute="centerY" secondItem="Cyw-rw-9YO" secondAttribute="centerY" id="j4C-P4-SB1"/>
+                            <constraint firstItem="piX-D1-ESN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="jph-S5-LlJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="piX-D1-ESN" secondAttribute="bottom" constant="32" id="okG-xH-PlA"/>
+                            <constraint firstItem="WZ4-w4-cNH" firstAttribute="trailing" secondItem="Cyw-rw-9YO" secondAttribute="trailing" id="qwj-kg-HBJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="stepsLabel" destination="hJL-vj-UTD" id="qPv-qP-jMo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="-3.3482142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image-2" width="496" height="496"/>
+        <image name="Image-3" width="496" height="496"/>
+        <image name="activity-svgrepo-com" width="512" height="512"/>
+    </resources>
+</document>
